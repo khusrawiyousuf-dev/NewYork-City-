@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact — NYC Premium</title>
+    <link rel="stylesheet" href="./NewYork-City-/assets/css/style.css">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🗽</text></svg>">
+    <style>
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            align-items: start;
+        }
+
+        .contact-info {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-info::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle, rgba(255, 59, 59, 0.15), transparent 70%);
+            pointer-events: none;
+        }
+
+        .contact-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .contact-info>p {
+            color: var(--text-secondary);
+            margin-bottom: 2rem;
+            line-height: 1.7;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .info-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 12px;
+            background: var(--gradient);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-item h5 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 4px;
+        }
+
+        .info-item p {
+            color: var(--text-primary);
+            font-weight: 500;
+        }
+
+        .contact-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 24px;
+            padding: 3rem;
+            backdrop-filter: blur(20px);
+        }
+
+        .contact-form h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-bottom: 2rem;
+            font-weight: 900;
+            letter-spacing: -0.5px;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-muted);
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--glass);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-family: inherit;
+            font-size: 0.95rem;
+            outline: none;
+            transition: all 0.3s ease;
+            resize: vertical;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px rgba(255, 59, 59, 0.1);
+            background: var(--bg-secondary);
+        }
+
+        .form-group textarea {
+            min-height: 140px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-info,
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loader">
+        <div class="loader-logo">NYC</div>
+        <div class="loader-bar"><span></span></div>
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-logo">NYC</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="boroughs.html">Boroughs</a></li>
+            <li><a href="attractions.html">Attractions</a></li>
+            <li><a href="culture.html">Culture</a></li>
+            <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+            <button class="theme-toggle"><span class="slider"></span></button>
+            <button class="menu-btn"><span></span><span></span><span></span></button>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="page-header-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1522083165195-3424ed129620?w=2400&q=95');">
+        </div>
+        <div class="page-header-content">
+            <span class="section-tag">Get in Touch</span>
+            <h1>Let's <span
+                    style="background: var(--gradient); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Connect</span>
+            </h1>
+            <p>Have questions about visiting NYC? Planning a trip? We'd love to hear from you.</p>
+        </div>
+    </header>
+
+    <section class="section" style="padding-top: 3rem;">
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <h3>Contact Information</h3>
+                <p>Reach out to us through any channel — our team responds within 24 hours.</p>
+                <div class="info-item">
+                    <div class="info-icon">📍</div>
+                    <div>
+                        <h5>Location</h5>
+                        <p>1 Times Square, New York, NY 10036</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📧</div>
+                    <div>
+                        <h5>Email</h5>
+                        <p>hello@nycpremium.com</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">📞</div>
+                    <div>
+                        <h5>Phone</h5>
+                        <p>+1 (212) 555-0199</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <div class="info-icon">🕐</div>
+                    <div>
+                        <h5>Hours</h5>
+                        <p>Mon – Fri, 9:00 AM – 6:00 PM EST</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form reveal"
+                onsubmit="event.preventDefault(); alert('Message sent! 🗽 We\\'ll be in touch soon.'); this.reset();">
+                <h3>Send a Message</h3>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>First Name</label>
+                        <input type="text" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Last Name</label>
+                        <input type="text" placeholder="Doe" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" placeholder="john@example.com" required>
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="Trip planning inquiry" required>
+                </div>
+                <div class="form-group">
+                    <label>Message</label>
+                    <textarea placeholder="Tell us about your NYC plans..." required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-magnetic"
+                    style="width: 100%; justify-content: center;">
+                    Send Message <span>→</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <section class="parallax-section" style="min-height: 60vh;">
+        <div class="parallax-bg"
+            style="background-image: url('https://images.unsplash.com/photo-1534430480872-3498386e7856?w=2400&q=95');">
+        </div>
+        <div class="parallax-content reveal">
+            <h2>See You in the City</h2>
+            <p>Whether it's your first visit or your hundredth — New York always has something new to show you.</p>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-3d-bg"></div>
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <h3>NYC</h3>
+                <p>Experience the city that never sleeps. From iconic landmarks to hidden gems — your journey begins
+                    here.</p>
+                <div class="social-links"><a href="#" class="social-link">𝕏</a><a href="#" class="social-link">📷</a><a
+                        href="#" class="social-link">f</a><a href="#" class="social-link">▶</a></div>
+            </div>
+            <div class="footer-col">
+                <h4>Explore</h4>
+                <ul>
+                    <li><a href="boroughs.html">Boroughs</a></li>
+                    <li><a href="attractions.html">Attractions</a></li>
+                    <li><a href="culture.html">Culture</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Support</h4>
+                <ul>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Use</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Newsletter</h4>
+                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 1rem;">Get the latest NYC
+                    stories delivered to your inbox.</p>
+                <form class="newsletter" onsubmit="event.preventDefault(); this.reset(); alert('Subscribed! 🗽');">
+                    <input type="email" placeholder="your@email.com" required><button type="submit">→</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div>© 2025 NYC Premium. Crafted with ❤️ for the city that never sleeps.</div>
+            <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+        </div>
+    </footer>
+
+    <script src="./NewYork-City-/assets/java/main.js"></script>
+</body>
+
+</html>
